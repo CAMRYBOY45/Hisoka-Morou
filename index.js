@@ -178,6 +178,7 @@ async function startHisoka() {
     }
 	
     hisoka.public = true
+    autojoin = false
 
     hisoka.serializeM = (m) => smsg(hisoka, m, store)
 
