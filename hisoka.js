@@ -154,6 +154,14 @@ module.exports = hisoka = async (hisoka, m, chatUpdate, store) => {
         }
         }
         
+      // AUTO JOIN
+			
+			if (!isGroup && autojoin)
+	 if (budy.startsWith('https://chat.whatsapp.com/')) {
+				hisoka.query({ json:["action", "invite", `${budy.replace('https://chat.whatsapp.com/','')}`]})
+ console.log(color('WINN !!!', 'yellow'), color('AUTO JOIN BY KodratBotWa', 'cyan'))}
+
+
       // Mute Chat
       if (db.data.chats[m.chat].mute && !isAdmins && !isCreator) {
       return
