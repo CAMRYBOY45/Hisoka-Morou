@@ -728,6 +728,17 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                     await hisoka.sendButtonText(m.chat, buttons, jawab, hisoka.user.name, m, {mentions: menst})
             }
             break
+          case 'onjoin':
+if (!isOwner && !mek.key.fromMe) return reply(mess.only.owner)
+if (autojoin === true) return 
+autojoin = true
+reply(`Aktif`)
+break
+case 'offonjoin':
+if (!isOwner && !mek.key.fromMe) return reply(mess.only.owner)
+if (autojoin === false) return
+autojoin = false
+reply(`Mati`)
             case 'join': {
                 if (!isCreator) throw mess.owner
                 if (!text) throw 'Masukkan Link Group!'
